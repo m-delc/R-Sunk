@@ -117,6 +117,20 @@ class MainActivity : AppCompatActivity() {
             setPadding(0, dp(4), 0, dp(20))
         })
 
+        content.addView(Button(this).apply {
+            text = "TEST"
+            setOnClickListener {
+                AlertDialog.Builder(this@MainActivity)
+                    .setTitle("Test")
+                    .setMessage("Test button works.")
+                    .setPositiveButton("OK", null)
+                    .show()
+            }
+        }, LinearLayout.LayoutParams(
+            LinearLayout.LayoutParams.MATCH_PARENT,
+            LinearLayout.LayoutParams.WRAP_CONTENT
+        ).apply { bottomMargin = dp(10) })
+
         content.addView(sectionTitle("Source folder"))
         sourceLabel = pathLabel()
         content.addView(sourceLabel)

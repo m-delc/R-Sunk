@@ -4,8 +4,14 @@ R-Sunk is a manual Android/GrapheneOS folder transfer utility built around Andro
 
 ## Current version
 
-**R-Sunk 2.0.0**  
-**Version code:** 20
+**R-Sunk 2.0.1**  
+**Version code:** 21
+
+## v2.0.1 changes
+
+- Added a temporary **TEST** button to the main screen for validating the permanent-project update/release workflow.
+- Added the reusable `release.sh` one-command release workflow.
+- Release workflow pins the Gradle wrapper to **Gradle 8.13** before building.
 
 ## Core transfer features
 
