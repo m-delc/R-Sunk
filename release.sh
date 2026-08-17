@@ -37,7 +37,7 @@ IFS='.' read -r MAJOR MINOR PATCH <<< "$CURRENT_VERSION"
 NEW_VERSION="$MAJOR.$MINOR.$((PATCH + 1))"
 NEW_CODE=$((CURRENT_CODE + 1))
 TAG="v$NEW_VERSION"
-RELEASE_APK="$APP_NAME-v$NEW_VERSION.apk"
+RELEASE_APK="$APP_NAME-$NEW_VERSION.apk"
 
 # Refuse to overwrite an already-published version.
 if gh release view "$TAG" >/dev/null 2>&1; then
